@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "windows-time-sync"
+version = "0.1.0"
+description = "A simple program that fixes the Windows time synchronization."
+authors = ["João Paulo Carvalho <jjpaulo2@protonmail.com>"]
+readme = "README.md"
+packages = [{include = "windows_time_sync"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+pywin32 = "^305"
+pysimplegui = "^4.60.4"
+
+
+[tool.poetry.group.build.dependencies]
+pyinstaller = "^5.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
