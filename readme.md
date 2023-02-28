@@ -6,7 +6,7 @@ This is a simple program that fixes the Windows time synchronization.
 
 ![](./screenshots/windows-bug.jpg)
 
-### Wich Windows versions?
+### Which Windows versions?
 
 | SO | Related? |
 |-|-|
