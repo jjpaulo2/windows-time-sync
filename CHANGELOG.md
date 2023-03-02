@@ -6,4 +6,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-* Consume the API from http://worldtimeapi.org/ (#1).
+* Consume the API from http://worldtimeapi.org/ ([#1](https://github.com/jjpaulo2/windows-time-sync/issues/1)).
