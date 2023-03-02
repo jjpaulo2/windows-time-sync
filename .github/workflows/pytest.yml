@@ -32,7 +32,7 @@ jobs:
         
     - name: Define PYTHONPATH
       run: |
-        echo "PYTHONPATH=home/runner/work/windows-time-sync" >> $GITHUB_ENV
+        echo "PYTHONPATH=/home/runner/work/windows-time-sync" >> $GITHUB_ENV
         
     - name: Test with pytest
       run: |
