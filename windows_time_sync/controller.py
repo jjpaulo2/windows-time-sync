@@ -36,11 +36,14 @@ class WindowsController:
         )
 
     async def get_timezones(self):
-        return self._provider.timezones()
+        return await self._provider.timezones()
 
     async def set_time(self, timezone: str) -> None:
         now = await self._provider.now(timezone)
         fixed_now = self._timezone_correction(now)
         windows_time_tuple = self._get_windows_time_tuple(fixed_now)
-        
+
+        print(fixed_now.isoformat())
+        print(windows_time_tuple)
+
         SetSystemTime(*windows_time_tuple)
