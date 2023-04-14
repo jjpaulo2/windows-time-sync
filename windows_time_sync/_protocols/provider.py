@@ -6,8 +6,5 @@ from datetime import datetime
 
 class TimeProvider(Protocol):
 
-    async def timezones(self) -> list[str]:
-        pass
-
-    async def now(self, timezone: str) -> datetime:
-        pass
+    async def now(self) -> datetime:
+        "Must return now as UTC time."

@@ -25,7 +25,7 @@ class WorldTimeOrgProvider:
         self._settings = settings
         self._http_client = http_client
 
-    async def _http_request(self, uri: str) -> list[str] | dict[str, str] | None:
+    async def _http_request(self, uri: str) -> dict[str, str] | None:
         response_formatted = None
 
         with suppress(*self._EXCEPTIONS_TO_SUPRESS):
@@ -34,14 +34,9 @@ class WorldTimeOrgProvider:
 
         return response_formatted
 
-    async def timezones(self) -> list[str] | None:
-        return await self._http_request(
-            uri=self._settings.get_timezones_uri()
-        )
-
-    async def now(self, timezone: str) -> datetime | None:
+    async def now(self) -> datetime | None:
         response_dict = await self._http_request(
-            uri=self._settings.get_time_uri(timezone)
+            uri=self._settings.get_time_uri()
         )
 
         if isinstance(response_dict, dict):
