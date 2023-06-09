@@ -1,9 +1,9 @@
-from pydantic import BaseSettings, Field
+from dataclasses import dataclass
 
-
-class TimeApiSettings(BaseSettings):
-    host: str = Field(env='TIME_API_HOST')
-    time_path: str = Field(env='TIME_API_TIME_PATH')
+@dataclass
+class TimeApiSettings:
+    host: str
+    time_path: str
 
     def get_time_uri(self) -> str:
         return self.host + self.time_path

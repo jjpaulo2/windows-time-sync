@@ -9,10 +9,7 @@ packages = [{include = "windows_time_sync"}]
 [tool.poetry.dependencies]
 python = ">=3.11,<3.12"
 pywin32 = "^305"
-pysimplegui = "^4.60.4"
 httpx = "^0.23.3"
-dependency-injection = "^1.2.0"
-pydantic = "^1.10.5"
 
 [tool.poetry.group.build.dependencies]
 pyinstaller = "^5.8.0"

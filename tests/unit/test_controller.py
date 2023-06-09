@@ -2,7 +2,7 @@ from pytest import fixture, mark
 from pytest_mock import MockerFixture
 from unittest.mock import MagicMock, AsyncMock
 
-from windows_time_sync.controller import WindowsController
+from windows_time_sync.windows import WindowsController
 
 
 @fixture
