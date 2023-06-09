@@ -1,0 +1,1 @@
+pyinstaller .\windows_time_sync\__main__.py --name windows-time-sync --onefile
