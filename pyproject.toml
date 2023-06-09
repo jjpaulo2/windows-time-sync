@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "windows-time-sync"
-version = "0.1.0"
+version = "0.1.0-beta"
 description = "A simple program that fixes the Windows time synchronization."
 authors = ["João Paulo Carvalho <jjpaulo2@protonmail.com>"]
 readme = "README.md"
