@@ -11,7 +11,6 @@ from windows_time_sync.settings import TimeApiSettings
 def settings():
     return TimeApiSettings(
         host='',
-        timezones_path='',
         time_path=''
     )
 
@@ -90,15 +89,15 @@ def provider_json_error(settings: TimeApiSettings, http_client_json_error: Async
 
 @mark.asyncio
 async def test_get_time_now_returns_datetime(provider_success: WorldTimeOrgProvider):
-    response = await provider_success.now('')
+    response = await provider_success.now()
     assert type(response) == datetime
 
 @mark.asyncio
 async def test_get_time_now_returns_none(provider_none: WorldTimeOrgProvider):
-    response = await provider_none.now('')
+    response = await provider_none.now()
     assert response == None
 
 @mark.asyncio
 async def test_get_time_now_json_error(provider_json_error: WorldTimeOrgProvider):
-    response = await provider_json_error.now('')
+    response = await provider_json_error.now()
     assert response == None
